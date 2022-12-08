@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: grey;
+}
+.container{
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 35px;
+}
+.container header{
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+.container.form{
+    margin-top: 30px;
+}
+.container .input-box{
+    width: 100%;
+    margin-top: 20px;
+}
+.input-box label{
+    color: #333;
+}
+.form :where( .input-box input, .select-box){
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    font-style: bold;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+.form .column{
+    display: flex;
+    column-gap: 15px;
+}
+.select-box select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+}
+.form button{
+    height: 55px;
+    width: 100%;
+    background-color: red;
+    font-style: bold;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 1s ease;
+}
+.form button:hover{
+    background-color: blue;
+    color: white;
+    transition: 1s;
+}
+@media screen and (max-width:700px){
+    .form .column header .sidebar{
+        flex-wrap: wrap;
+    }
+}
+
+
+
+/*--------------------------*/
+
+.sidebar{
+    width: 300px;
+    position: fixed;
+    box-sizing: border-box;
+    background-color: black;
+    color:white ;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+    transition: width 300ms;
+    flex-wrap: wrap;
+}
+.sidebar-brand{
+    height: 90px;
+    padding: 1rem 0rem 1rem 2rem;
+    color: white;
+}
+.sidebar-brand span{
+    display: inline-block;
+    margin-right: 1rem;
+
+}
+.sidebar-menu{
+    margin-top: 1rem;
+}
+.sidebar-menu a{
+    padding-left: 1rem;
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.sidebar-menu li{
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-left: 10%;
+}
+.sidebar-menu a span:first-child{
+    padding-left: 1rem;
+    font-size: 1.5rem;
+
+}
+.sidebar-menu a.active{
+    background: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: black;
+    border-radius: 30px 0px 0px 0px;
+}
+.content{
+    transition: margin-test 300ms;
+    margin-left: 20%;
+}
+.dashboard{
+    margin-left: 15px;
+
+}
+header{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 2px 5px 15px 2px rgb(0, 0, 0/10%);
+    position: fixed;
+    left: 20%;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    transition: left 300ms;
+}
